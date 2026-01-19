@@ -3,6 +3,7 @@ import express from 'express';
 // Another way to import in express
 import dotenv from "dotenv";
 import cors from "cors";
+import path from "path";
 
 import notesRoutes from "./routes/notesRoutes.js"
 import { connectDB } from './config/db.js';
@@ -13,13 +14,16 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+const __dirname = path.resolve();
 
 // middleware
-app.use(
+if (process.env.NODE_ENV !== "production") {
+  app.use(
     cors({
-        origin: "http://localhost:5173",
+      origin: "http://localhost:5173",
     })
-);
+  );
+}
 app.use(express.json()); // Gives access to req.body
 app.use(rateLimiter);
 
@@ -33,6 +37,13 @@ app.use(rateLimiter);
 app.use("/api/notes", notesRoutes);
 // app.use("/api/email", emailRoutes);        
 // Let's you make everything into modules
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+  });
+}
 
 connectDB().then(() => {
     app.listen(PORT, () => {
