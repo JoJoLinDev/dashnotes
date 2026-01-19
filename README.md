@@ -1,4 +1,7 @@
 # 📝MERN Notes Dashboard App
+
+<img width="1860" height="836" alt="Frontpage" src="https://github.com/user-attachments/assets/3420658f-f796-4e37-9736-4715dad16eb0" />
+
 ## A MERN notes application where users can create, read, update, and delete notes, built with MongoDB, Express, React, and Node.js.
 
 ## 📃Overview
@@ -22,26 +25,6 @@ Other Tools:
 * Nodemon for development
 * Render for deployment
 * Upstash for ratelimiter
-
-## 📂Project Structure
-```bash
-root/
-  backend/
-    server.js
-    src/
-      routes/
-      controllers/
-      models/
-      middleware/
-  frontend/
-    src/
-      components/
-      pages/
-      hooks/
-```
-backend/: Express API, routes, controllers, and MongoDB models.
-
-frontend/: React app with pages and components for listing, creating, and editing notes.
 
 ## ✅Getting Started
 Prerequisites (For local deployment)
@@ -109,16 +92,8 @@ PUT /api/notes/:id – Update a note by id.
 
 DELETE /api/notes/:id – Delete a note by id.
 
-## ✨Screenshots✨
-Add screenshots or GIFs in this section, for example:
-
-Main dashboard with no notes:
-
-Creating notes:
-
-Deleting notes:
-
-Editing notes:
+## ✨Demo✨
+https://github.com/user-attachments/assets/11a3e643-e379-4544-aad6-3c88122153dd
 
 ## 🥳Deployment
 Deployed on Render: [DashNotes](https://dashnotes.onrender.com/)
