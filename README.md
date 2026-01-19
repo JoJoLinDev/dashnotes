@@ -12,7 +12,7 @@ It is inspired by a MERN Stack tutorial and was implemented from scratch while f
 * Create, view, update, and delete notes through a REST API.
 * Basic validation, error handling, and optional rate limiting on the backend.
 * Responsive frontend built with React.
-* Deployed full‑stack application ([Click ME!](https://dashnotes.onrender.com/)).
+* Deployed full‑stack application ([Click ME!](https://dashnotes.onrender.com/), it may take a minute for Render to wake deployment).
 
 ## 💻Tech Stack
 Frontend: React, JavaScript, CSS, Tailwind, DaisyUI, 
@@ -97,6 +97,7 @@ https://github.com/user-attachments/assets/11a3e643-e379-4544-aad6-3c88122153dd
 
 ## 🥳Deployment
 Deployed on Render: [DashNotes](https://dashnotes.onrender.com/)
+(It may take a minute for Render to wake deployment)
 
 ## 🧠Lessons Learned
 * Building a REST API with Express and MongoDB.
